@@ -1,11 +1,12 @@
+import os
 import logging
 from telegram import Update
 from telegram.ext import Application, MessageHandler, filters, ContextTypes
 import requests
 
 # تنظیمات
-TELEGRAM_TOKEN = '7461713881:AAHBsr13LnQMAyZxkNlzDHeQboXw9m1Imms'
-DEEPSEEK_API_KEY = 'sk-21360ba9b3664009ad873590b039d7bb'
+TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN')
+DEEPSEEK_API_KEY = os.environ.get('DEEPSEEK_API_KEY')
 DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"
 
 # تنظیمات لاگ
